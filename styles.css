@@ -1,0 +1,481 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-blue: #004a8d;
+    --ribbon-blue: #e3f2fd;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+}
+
+/* Top Ribbon */
+.top-ribbon {
+    background-color: var(--ribbon-blue);
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    transition: all 0.3s;
+}
+
+.contact-info {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+}
+
+.contact-info span a {
+    color: #00000c;
+    text-decoration: none;
+    margin-bottom: 8px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.contact-info span a:hover {
+    color: var(--main-blue);
+    transform: translateX(5px);
+    text-decoration: underline;
+}
+
+.social-icons a {
+    color: #000;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.social-icons a:hover {
+    color: var(--main-blue);
+    transform: translateY(-3px);
+}
+
+.font-size-switcher {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.font-size-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px 8px;
+    font-size: 14px;
+    color: var(--main-blue);
+    transition: all 0.3s;
+}
+
+.font-size-btn:hover {
+    background-color: var(--main-blue);
+    color: white;
+    border-radius: 3px;
+}
+
+.font-size-btn.active {
+    font-weight: bold;
+    color: #002f5c;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 35px;
+    position: relative;
+}
+
+.logo {
+    width: 100px;
+}
+
+.shop-name {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.hindi-name {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: 2.3em;
+    color: var(--main-blue);
+    margin-bottom: 10px;
+}
+
+.english-name {
+    font-size: 1.8em;
+    color: var(--main-blue);
+    margin: 10px 0 0 0;
+}
+
+.tagline {
+    font-size: 20px;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Enquiry Form */
+.enquiry-form {
+    position: relative;
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+.enquiry-trigger {
+    background-color: var(--main-blue);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.enquiry-trigger:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.enquiry-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    z-index: 100;
+}
+
+.enquiry-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--main-blue);
+    padding: 10px;
+    text-align: left;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 1.2em;
+    position: relative;
+    padding: 5px 0;
+    transition: all 0.3s;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Image Slider */
+.slider-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    animation: slide 15s infinite;
+}
+
+.slide {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes slide {
+    0%, 15% {
+        transform: translateX(0);
+    }
+    20%, 35% {
+        transform: translateX(-20%);
+    }
+    40%, 55% {
+        transform: translateX(-40%);
+    }
+    60%, 75% {
+        transform: translateX(-60%);
+    }
+    80%, 95% {
+        transform: translateX(-80%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.ticker-container {
+    background-color: #e6f0ff;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.ticker-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 15s linear infinite;
+    font-size: 16px;
+    color: #111;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.notice-section {
+    padding: 30px 20px;
+    background: #f4f8ff;
+    font-family: Arial, sans-serif;
+}
+
+.notice-section h2 {
+    font-size: 1.8em;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.notice-tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.notice-tab {
+    padding: 10px 20px;
+    border: none;
+    background: #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.notice-tab.active,
+.notice-tab:hover {
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    color: #fff;
+}
+
+.notice-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notice-content li {
+    background: white;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notice-content a {
+    text-decoration: none;
+    color: #004a8d;
+    font-weight: 500;
+}
+
+.pdf-btn {
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.pdf-btn:hover {
+    opacity: 0.9;
+}
+
+.footer {
+    background-color: #0a2a57;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1 1 300px;
+    margin: 10px;
+}
+
+.footer h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: lightskyblue;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: lightcyan;
+}
+
+.footer a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #f98508;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.footer a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: scale(1.05);
+    color: lightgray;
+}
+
+.contact-icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.footer-bottom {
+    background-color: #061e3e;
+    color: #ccc;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: #b2acac;
+    text-decoration: underline;
+    margin: 0 8px;
+}
+
+.map-btn {
+    background-color: #0d6fab;
+    color: rgb(230, 224, 224);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.map-btn:hover {
+    background-color: #CD5C5C;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-ribbon {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .enquiry-form {
+        margin: 20px auto;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 0.7em;
+    }
+
+    .slider-container {
+        height: 250px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}
