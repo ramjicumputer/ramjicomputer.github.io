@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramji Computer Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ 
+    <!-- Top Ribbon -->
+     <div class="top-ribbon" id="home">
+            <div class="contact-info">
+  <span>
+    <a href="tel:+918602405648" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-phone"></i> +91 86024 05648
+    </a>
+  </span>
+  <span>
+    <a href="mailto:rji882027@gmail.com" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-envelope"></i> rji882027@gmail.com
+    </a>
+  </span>
+  <span>
+    <a href="https://wa.me/918602405648" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+  </span>
+</div>
+
+        
+        <div class="font-size-switcher">
+            <button class="font-size-btn" onclick="changeFontSize('small')">A</button>
+            <button class="font-size-btn" onclick="changeFontSize('medium')">A</button>
+            <button class="font-size-btn" onclick="changeFontSize('large')">A+</button>
+        </div>
+        
+    </div>
+
+    <!-- Header -->
+    <div class="header" >
+        <img src="logo.jpg" alt="Shop Logo" class="logo">
+        <div class="shop-name">
+            <div class="hindi-name">रामजी कंप्यूटर & यूको बैंक कियोस्क</div>
+            <h1 class="english-name">Ramji Computer & UCO Bank Kiosk</h1>
+            <p class="tagline"> Online service provider, Authorised Kiosk and Tax Consultant</p>
+        </div>
+        
+        <!-- Enquiry Form -->
+        <div class="enquiry-form">
+            <div class="enquiry-trigger" onclick="toggleEnquiryForm()">
+                Enquiry Form <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="enquiry-content" id="enquiryForm">
+                <form action="mailto:rji882027@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#notice-section">Notifications</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+     <!-- Image Slider -->
+    <div class="slider-container">
+        <div class="slides">
+            <div class="slide"><a href=#contact><img src="2.jpg" alt="uco bank"></a></div>
+            <div class="slide"><a href="https://epravesh.highereducation.mp.gov.in/" target="_blank"><img src="5.png" alt="epravesh"></a></div>
+            <div class="slide"><a href="https://mpsos.mponline.gov.in/app/#/rjny/rjnynew" target="_blank"><img src="6.jpg" alt="mp sos"></a></div>
+            <div class="slide"><a href="https://epravesh.highereducation.mp.gov.in/" target="_blank"><img src="5.png" alt="epravesh"></a></div>
+            <div class="slide"><a href=#contact><img src="7.jpg" alt="RJC"></a></div>
+        </div>
+    </div>
+
+<!-- Ticker Section -->
+<div class="ticker-container">
+  <div class="ticker-text">
+    Notifications: MP College Admission 2025-26 , MP ITI Admission 2025-26
+  </div>
+</div>
+    <!-- Important Notices Section -->
+<div class="notice-section" id="notice-section">
+  <h2>Important Notices</h2>
+  <div class="notice-tabs">
+    <button class="notice-tab active" onclick="showNoticeTab('admission')">Admission</button>
+    <button class="notice-tab" onclick="showNoticeTab('exam')">Examination</button>
+    <button class="notice-tab" onclick="showNoticeTab('scheme')">Scheme</button>
+    <button class="notice-tab" onclick="showNoticeTab('vacancy')">Vacancies</button>
+  </div>
+
+  <div class="notice-content" id="admission">
+    <ul>
+      <li><a href="https://epravesh.highereducation.mp.gov.in/Student-cp/Form_Signup.aspx?id=tNHRXf8yv1w=" target="_blank">MP College Admission 2025-26</a> <a href="college_add.pdf" target="_blank" download class="pdf-btn">📄 PDF</a></li>
+      <li><a href="https://www.satiengg.in/" target="_blank">New Admission Guidelines-SATI</a> <a href="sati.pdf" target="_blank" download class="pdf-btn">📄 PDF</a></li>
+      <li><a href="https://mpiticounseling.co.in/" target="_blank">MP ITI </a> <a href="" target="_blank" download class="pdf-btn">📄 PDF</a></li>
+    </ul>
+  </div>
+  <div class="notice-content" id="exam" style="display:none">
+    <ul><!--
+      <li><a href="#">Revised Exam Time Table B.Tech</a> <a href="exam_tt.pdf" target="_blank" download class="pdf-btn">📄 PDF</a></li>
+      <li><a href="#">Exam Notice for MSC Students</a> <a href="msc_exam.pdf" target="_blank" download class="pdf-btn">📄 PDF</a></li>
+    </ul>-->
+  </div>
+  <div class="notice-content" id="scheme" style="display:none">
+    <ul><!--
+      <li><a href="#">Fee Structure 2025</a> <a href="fees2025.pdf" target="_blank" download class="pdf-btn">📄 PDF</a></li>
+      <li><a href="#">Scholarship Schemes</a> <a href="scholarship.pdf" target="_blank" download class="pdf-btn">📄 PDF</a></li>
+    </ul>-->
+  </div>
+  <div class="notice-content" id="vacancy" style="display:none">
+    <ul><!--
+      <li><a href="#">MP College Admission 2025-26</a> <a href="college_add.pdf" target="_blank" download class="pdf-btn">📄 PDF</a></li>
+      <li><a href="#">Staff Vacancy 2025</a> <a href="vacancy2025.pdf" target="_blank" download class="pdf-btn">📄 PDF</a></li>
+    </ul>-->
+  </div>
+</div>
+
+
+
+        <footer class="footer">
+  <div class="footer-section">
+    <h3 style="color: #F5F5DC;">Important Links</h3>
+    <ul>
+      <li><a href="https://www.mponline.gov.in/portal/">MP ONLINE</a></li>
+      <li><a href="https://digitalseva.csc.gov.in/">CSC</a></li>
+      <li><a href="https://www.nta.ac.in/">NTA</a></li>
+      <li><a href="https://epravesh.highereducation.mp.gov.in/">E PRAVESH</a></li>
+      <li><a href="https://voters.eci.gov.in/"> Election Commission</a></li>
+      <li><a href="https://samagra.gov.in/">SAMAGRA</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-section">
+    <h3>&nbsp;</h3> <!-- Spacer column -->
+    <ul>
+      <li><a href="https://mpbse.mponline.gov.in/MPBSE/MPBSE">MPBSE</a></li>
+      <li><a href="https://esb.mp.gov.in/">MP ESB</a></li>
+      <li><a href="https://bu.mponline.gov.in/1068/Home">BU BHOPAL</a></li>
+      <li><a href="https://bubhopal.mponline.gov.in/Portal/index.aspx">BU MPONLINE</a></li>
+      <li><a href="https://dte.mponline.gov.in/portal/services/onlinecounselling/counshomepage/home.aspx">MP DTE</a></li>
+      <li><a href="https://www.rgpv.ac.in/">RGPV</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-section" id="contact">
+    <h3 style="color: #CD5C5C;">Get in touch with us</h3>
+    <div class="contact-item" onclick="copyToClipboard('Ramji Computer & UCO Bank Kiosk – Bareth Rd, Near Bank of Maharashtra, In Front of SGS College, Ganj Basoda (M.P.) 464221, INDIA')">
+      <span class="contact-icon">📍</span>
+      Ramji Computer & UCO Bank Kiosk – Bareth Rd, Near Bank of Maharashtra, In Front of SGS College, Ganj Basoda (M.P.) 464221, INDIA
+    </div>
+    <div class="contact-item" onclick="copyToClipboard('rji882027@gmail.com')">
+      <span class="contact-icon">✉️</span>
+      rji882027@gmail.com
+    </div>
+    <div class="contact-item" onclick="copyToClipboard('+91-86024-05648')">
+      <span class="contact-icon">📞</span>
+      +91-86024-05648
+    </div>
+    <div class="contact-item" onclick="copyToClipboard('+91-91092-44927')">
+      <span class="contact-icon">📠</span>
+      +91-91092-44927
+    </div>
+    <button class="map-btn" onclick="window.open('https://maps.app.goo.gl/HinWusdbJkp8hpXBA','_blank')">📍 Find us on map</button>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  © 2025. Ramji Computer Ganj Basoda. All Rights Reserved.
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
